@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cotton:block/test_block2"
+    }
+  }
+}

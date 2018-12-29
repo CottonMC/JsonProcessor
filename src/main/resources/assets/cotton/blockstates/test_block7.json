@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "cotton:block/test_block7",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "cotton:block/test_block7",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "cotton:block/test_block7"
+    }
+  }
+}

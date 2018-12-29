@@ -1,0 +1,8 @@
+{
+  "overrides": [],
+  "parent": "cotton:block/mangrove_planks",
+  "ambientocclusion": true,
+  "display": {},
+  "textures": {},
+  "elements": []
+}

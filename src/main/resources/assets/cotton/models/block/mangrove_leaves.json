@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "cotton:block/mangrove_leaves"
+  }
+}

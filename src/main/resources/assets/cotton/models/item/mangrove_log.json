@@ -1,0 +1,8 @@
+{
+  "overrides": [],
+  "parent": "cotton:block/mangrove_log",
+  "ambientocclusion": true,
+  "display": {},
+  "textures": {},
+  "elements": []
+}

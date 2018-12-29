@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "cotton:block/mangrove_log",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "cotton:block/mangrove_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "cotton:block/mangrove_log"
+    }
+  }
+}

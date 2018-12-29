@@ -1,0 +1,8 @@
+{
+  "overrides": [],
+  "parent": "cotton:block/potted_mangrove_sapling",
+  "ambientocclusion": true,
+  "display": {},
+  "textures": {},
+  "elements": []
+}

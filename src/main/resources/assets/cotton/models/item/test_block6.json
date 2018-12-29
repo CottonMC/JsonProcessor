@@ -1,0 +1,8 @@
+{
+  "overrides": [],
+  "parent": "cotton:block/test_block6",
+  "ambientocclusion": true,
+  "display": {},
+  "textures": {},
+  "elements": []
+}

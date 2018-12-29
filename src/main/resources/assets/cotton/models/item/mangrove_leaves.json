@@ -1,0 +1,8 @@
+{
+  "overrides": [],
+  "parent": "cotton:block/mangrove_leaves",
+  "ambientocclusion": true,
+  "display": {},
+  "textures": {},
+  "elements": []
+}

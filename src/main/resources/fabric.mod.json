@@ -1,0 +1,15 @@
+{
+  "id": "cotton",
+  "name": "CottonAPI",
+  "description": "A small api to speed up the development process.",
+  "version": "1.0.0",
+  "side": "universal",
+  "initializer": "ansraer.cotton.CottonAPI",
+  "requires": {
+    "fabric": "*"
+  },
+  "mixins": {
+    "client": "cotton.client.json",
+    "common": "cotton.common.json"
+  }
+}

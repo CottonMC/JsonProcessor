@@ -1,0 +1,10 @@
+{
+  "overrides": [],
+  "parent": "item/generated",
+  "ambientocclusion": true,
+  "display": {},
+  "textures": {
+    "layer0": "cotton:item/test_item"
+  },
+  "elements": []
+}
