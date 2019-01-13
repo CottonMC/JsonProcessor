@@ -1,21 +1,56 @@
 plugins {
-	id 'fabric-loom' version '0.1.0-SNAPSHOT'
+    id "maven-publish"
+    id "java"
+    id "com.jfrog.artifactory" version "4.9.0"
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-archivesBaseName = "cotton"
-version = "1.0.0"
-
-minecraft {
+archivesBaseName = "cotton-json-processor"
+version = "0.1.0"
+repositories {
+    jcenter()
+    mavenCentral()
+    maven{
+        url="http://server.bbkr.space:8081/artifactory/libs-release"
+    }
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:18w50a"
-	mappings "net.fabricmc:yarn:18w50a.35"
-	modCompile "net.fabricmc:fabric-loader:0.2.0.70"
+    
+    compile(project(":processor_annotations"))
+    annotationProcessor(project(":processor"))
+    //testing
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    testCompile("org.junit.jupiter:junit-jupiter-params:5.3.1")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+}
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modCompile "net.fabricmc:fabric:0.1.1.47"
+artifactory {
+    contextUrl = "http://server.bbkr.space:8081/artifactory/"
+    publish {
+        repository {
+            if (project.version.toString().contains("SNAPSHOT")) {
+                repoKey = "libs-snapshot-local"
+            } else {
+                repoKey = "libs-release-local"
+            }
+
+            username = cottonArtifactoryUser == null ? System.getProperty("artifactoryUser") : cottonArtifactoryUser
+            password = cottonArtifactoryPassword == null ? System.getProperty("artifactoryPassword") : cottonArtifactoryPassword
+        }
+        defaults {
+            publications("maven")
+        }
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact project(":processor_annotations").jar
+            artifact project(":processor").jar
+        }
+    }
 }

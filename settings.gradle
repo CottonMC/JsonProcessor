@@ -8,3 +8,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+include 'processor'
+include 'processor_annotations'
+
+rootProject.name = "cotton-autojson-processor"
