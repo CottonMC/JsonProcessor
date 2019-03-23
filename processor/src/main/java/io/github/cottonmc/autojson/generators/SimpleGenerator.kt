@@ -37,10 +37,10 @@ class SimpleGenerator(val generator : ContentGenerator) {
     }
 
     companion object {
-        val SIMPLE_BLOCK_MODEL = SimpleGenerator(BasicBlockModel)
-        val SIMPLE_BLOCK_STATE = SimpleGenerator(BasicBlockState)
-        val SIMPLE_ITEM_MODEL = SimpleGenerator(BasicItemModel(Identifier("minecraft","item/generated")))
-        val SIMPLE_BLOCK_ITEM_MODEL = SimpleGenerator(BasicBlockItemModel)
-        val SIMPLE_LOOT_TABLE = SimpleGenerator(BasicLootTable)
+        val SIMPLE_BLOCK_MODEL = SimpleGenerator(Gens.basicBlockModel)
+        val SIMPLE_BLOCK_STATE = SimpleGenerator(Gens.basicBlockState)
+        val SIMPLE_ITEM_MODEL = SimpleGenerator(Gens.basicItemModel)
+        val SIMPLE_BLOCK_ITEM_MODEL = SimpleGenerator(Gens.basicBlockItemModel)
+        val SIMPLE_LOOT_TABLE = SimpleGenerator(Gens.basicLootTable)
     }
 }

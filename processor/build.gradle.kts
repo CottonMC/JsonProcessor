@@ -26,6 +26,6 @@ repositories {
 
 dependencies {
     compile("org.apache.bcel:bcel:6.2")
-    compile(group= "io.github.cottonmc", name= "json-factory", version= "0.3.0")
+    compile(group= "io.github.cottonmc", name= "json-factory", version= "0.3.2")
     compile(project(":processor_annotations"))
 }
